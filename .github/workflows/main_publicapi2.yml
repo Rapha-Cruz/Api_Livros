@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - publicApi
+name: Build and deploy Python app to Azure Web App - publicAPI2
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_310EC396DC6A4D81964DA5EEF22D1554 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B38E17B91D034B5DAF6D5B3D3F02CFA8 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_63B96E3860D044AA9F01140A99ADAACA }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A7057DA9A2034D3CAF12782AA97927AD }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D938735ADC384C2096D40E1E85DA4154 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_24D0A5C392244046B383EBC1B8921143 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'publicApi'
+          app-name: 'publicAPI2'
           slot-name: 'Production'
           
